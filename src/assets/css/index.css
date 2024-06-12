@@ -1,0 +1,426 @@
+:root {
+    --bgcolor:#387197;
+
+}
+html {
+    overflow-y: overlay;
+}
+html,body {
+    min-width: 1280px;
+    width: 100%;
+    height: 100%;
+}
+
+/*页面头部*/
+.header {
+    height: 70px;
+
+}
+.header-list  {
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    box-shadow: 0 5px 5px rgba(0,0,0,.1);
+}
+.header-top {
+    width: 1280px;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/*logo*/
+.logo {
+    width: 200px;
+}
+.logo a {
+    background:url("../images/logo.png") no-repeat center center;
+    width: 180px;
+    height: 50px;
+    display: inline-block;
+    background-size: contain;
+}
+
+
+
+.header-top   ul  {
+    display: flex;
+    flex: 1px;
+}
+.header-menu   li  {
+   margin: 0 30px;
+   position: relative;
+
+     
+}
+.header-menu   li  span {
+   font-size: 16px;
+   font-weight: 700 ;
+
+     
+}
+
+.header-menu   li  span:hover {
+    color: var(--bgcolor);
+}
+/* 伪元素 */
+.header-menu   li::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    border-bottom: 3px solid var(--bgcolor);
+    transition: all 0.2s;
+}
+
+.header-menu   li:hover::before {
+    content: "";
+    width: 100%;
+    left: 0;
+    color: var(--bgcolor);
+    
+}
+
+
+    
+/* 头部右侧 */
+.header-right {
+    display: flex;
+}
+.header-right-l {
+     /* background:url(../images/telt.png) no-repeat; */
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    -webkit-mask-box-image:url(../images/telt.png);
+    background:var(--bgcolor);
+}
+    
+
+
+.header-right-r  p {
+
+  color: var(--bgcolor);
+    font-weight: 600;
+
+}
+.header-right-r-number {
+   font-size: 18px; 
+  
+
+}
+/* 轮播 */
+.banner-list {
+    max-width: 1920px;
+    margin: auto;
+}
+/* 图片 */
+.banner-list .el-carousel__item>img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+/* 轮播下的图片 */
+.banner-item {
+    background-color: var(--bgcolor);
+    text-align: center;
+    padding-top: 20px;
+}
+.banner-item img {
+    width: 1280px;
+}
+.indexForm {
+    position: relative;
+}
+.banner-list  .form_bg {
+    position: absolute;
+    right: 130px;
+    top:  100px;
+    width: 380px;
+    padding: 20px 0;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 4px 4px 20px rgba(0,0,0,.2);
+
+}
+.form_head {
+    font-size: 30px;
+    line-height: 80px;
+}
+
+.form_head b {
+    color: var(--bgcolor);
+} 
+.form_bg .el-input {
+    width: 300px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.form_bg .el-input--large .el-input__wrapper {
+    padding: 5px 15px;
+}
+.form_bg  .el-button {
+    width: 300px;
+    height: 50px;
+    border-radius: 40px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.privacy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.privacy input {
+    margin-right: 10px;
+}
+.privacy span {
+    font-size: 13px;
+}
+.checkbox-type {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+}
+/* 复选框未选中 */
+.checkbox-type::before {
+    content: '';
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    border:2px solid #aaa;
+    display: inline-block;
+}
+/* 复选框已选中  */
+.checkbox-type:checked::before {
+    content: '\ebe6';
+    font-family: 'iconfont';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--bgcolor);
+    border:1px solid  var(--bgcolor);
+    color: #fff;
+    font-weight: 700;
+    overflow:auto
+}
+
+.container  {
+    width: 1280px;
+    margin: auto;
+}
+.container-bg  {
+    padding: 50px 0;
+}
+.index-title  {
+    text-align: center;
+}
+.index-title  h3{
+    font-size: 42px;
+     font-weight: 700 ;
+}
+
+.index-title  p  {
+    font-size: 20px;
+    color: #666;
+    padding: 20px;
+}
+.advantage-item1 ul , .advantage-item2  ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+
+.advantage-item1 li  {
+    font-size: 20px;
+    color: #999;
+    font-weight: 300;
+}
+.advantage-num {
+    color: var(--bgcolor);
+    font-size: 50px;
+    font-weight: 700px;
+}
+
+.advantage-item2 ul li {
+    text-align: center;
+    width: calc(100%/4);
+    margin: 0 20px;
+}
+.advantage-item2  h4 {
+    font-size: 30px;
+    font-weight: 700 ;
+    margin-bottom: 20px;
+    
+}
+
+.advantage-item2 p {
+    color: #999;
+    font-weight: 300;
+}
+/* 行标签 加宽高无效 */
+.advantage-item2  i {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    display: inline-block;  /* 行内块 */
+    border:  1px solid var(--bgcolor);
+    border-radius: 50%;
+    font-size: 50px;
+    color: var(--bgcolor); 
+    
+}
+/* 动画 */
+.advantage-item2  i:hover{
+    animation: shake .6s;
+}
+/* 动画 */
+@keyframes shake {
+    0%  {
+        transform: rotate(40deg);
+    }
+    20%  {
+        transform: rotate(-40deg);
+    }
+    40%  {
+        transform: rotate(-40deg);
+    }
+    60%  {
+        transform: rotate(20deg);
+    }
+    80%  {
+        transform: rotate(-20deg);
+    }
+    100%  {
+        transform: rotate(0deg);
+
+    }
+}
+    
+
+
+.renovation-list ul {
+   display: grid;
+   width: 1280px;
+   grid-template-columns: repeat(3,1fr);
+   gap: 30px;
+}
+
+.renovation-list ul li {
+    width: calc(1280px/3 - 40px);
+    border: 1px solid #ccc;
+    position: relative;
+}
+.renovation-img {
+    width: 100%;
+    height: 225px;
+    overflow: hidden;
+}
+
+.renovation-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s;
+
+}
+.renovation-box {
+    padding: 20px;
+   
+   
+}
+/* overflow 超出隐藏   white-space不换行  */
+.renovation-box h3 {
+    font-size: 18px;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* color: #d11616; */
+}
+.renovation-box-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+.renovation-box-info p {
+    /* color:#d11616; */
+     /* color:var(--bgcolor);  */
+     font-size: 12px;
+}
+.renovation-box-info span {
+     color:var(--bgcolor); 
+    /* color:#d11616; */
+}
+
+/* 1、移入li上面的时候出现阴影 */
+.renovation-list ul li:hover {
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+/* 2、移入时图片放大 */
+.renovation-list ul li:hover .renovation-img img {
+    transform:scale(1.1);
+}
+
+.renovation-hover {
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    opacity: 0;
+}
+/* 3、图片颜色变深 */
+.renovation-list ul li:hover .renovation-hover {
+    width: 100%;
+    height: 225px;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+/* 4、移入时方框的动画 */
+.renovation-hover::before {
+    content: '';
+    position: absolute;
+    inset:0;
+    margin:auto;
+    width: 0;
+    height: 0; 
+    transition: all .2s;
+}
+.renovation-list ul li:hover .renovation-hover::before {
+    content: '';
+    width: 70%;
+    height: 60%;
+    border: 1px solid #fff;
+}
+
+/* 5、查看详情的动画 */
+.renovation-hover span {
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,30px);
+}
+.renovation-list ul li:hover .renovation-hover span {
+    transform: translate(-50%,-50%);
+    transition: all .2s;
+}
+
+.information {
+    margin-top:30px;
+}

@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "Go Modules",
+			"path": "../../../../go/pkg/mod"
+		},
+		{
+			"name": "Go SDK",
+			"path": "../../../../../../usr/local/go/src"
+		}
+	],
+	"settings": {}
+}
